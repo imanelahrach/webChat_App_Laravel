@@ -7,11 +7,15 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="user-id" content="{{ auth()->user()->id ?? '' }}">
+    <meta name="user-name" content="{{ auth()->user()->name ?? '' }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!--font awsome -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -36,7 +40,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                       <li>
+                       <a href="{{route('messages.index')}}"> Messages </a> </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

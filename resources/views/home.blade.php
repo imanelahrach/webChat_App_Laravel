@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <h2>  Welcome to supMti group chat !</h2> 
                 </div>
             </div>
         </div>
